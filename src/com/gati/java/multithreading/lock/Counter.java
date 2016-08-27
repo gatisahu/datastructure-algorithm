@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.gati.java.multithreading.lock;
+
+/**
+ * @author sahug
+ *
+ */
+public class Counter {
+	private int count = 0;
+
+	public synchronized void increment() {
+		++count;
+	}
+
+	public int getCount() {
+		return count;
+	}
+}
