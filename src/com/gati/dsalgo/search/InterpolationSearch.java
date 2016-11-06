@@ -39,8 +39,7 @@ public class InterpolationSearch {
 		int hi = length - 1;
 
 		while (lo < hi) {
-			// Probing the position with keeping
-			// uniform distribution in mind.
+			// Probing the position with keeping  uniform distribution in mind.
 			int pos = lo + ((x - arr[lo]) * (hi - lo) / (arr[hi] - arr[lo]));
 			if (x == arr[pos]) {
 				return pos;

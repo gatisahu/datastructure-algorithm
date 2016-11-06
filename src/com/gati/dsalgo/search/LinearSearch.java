@@ -13,7 +13,7 @@
  *   
  *  Linear search is good:  
  *  – for arrays with a small number of elements
- *  – when you will not search the array many times\
+ *  – when you will not search the array many times
  *  - when the values in the array will be changed
  *    
  */
@@ -47,10 +47,10 @@ public class LinearSearch {
 
 		for (int index = 0; index < length; index++) {
 			if (x == arr[index]) {
-				return index;  // Found key, return index.
+				return index; // Found key, return index.
 			}
 		}
-		return -1;   // Failed to find key
+		return -1; // Failed to find key
 
 	}
 
