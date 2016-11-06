@@ -28,7 +28,7 @@ public class InterpolationSearch {
 
 		// If element was found
 		if (index != -1)
-			System.out.println("Element found at index %d" + index);
+			System.out.println("Element found at index " + index);
 		else
 			System.out.println("Element not found.");
 
@@ -50,7 +50,7 @@ public class InterpolationSearch {
 				hi = pos - 1;
 			}
 		}
-		return 0;
+		return -1;
 	}
 
 }
