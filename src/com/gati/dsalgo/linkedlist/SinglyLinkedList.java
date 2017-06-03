@@ -88,9 +88,14 @@ public class SinglyLinkedList<E> {
 		if (head == null) {
 			return;
 		}
-		if (tempNode != null && tempNode.data == key) {
-			head = tempNode.next;
-			return;
+
+		if (tempNode != null) {
+			Comparable<? super E> v = (Comparable<? super E>) key;
+			int cmp = v.compareTo(tempNode.data);
+			if (cmp == 0) {
+				head = tempNode.next;
+				return;
+			}
 		}
 		while (tempNode != null && tempNode.data != key) {
 			previousNode = tempNode;
@@ -121,17 +126,17 @@ public class SinglyLinkedList<E> {
 			tnode = tnode.next;
 		}
 	}
-	
-	public void reverse(){
-		Node prevNode=null;
-		Node current=head;
-		while(current !=null){
-			Node tempNode=current.next;
-			current.next=prevNode;
-			prevNode=current;
-			current=tempNode;
+
+	public void reverse() {
+		Node prevNode = null;
+		Node current = head;
+		while (current != null) {
+			Node tempNode = current.next;
+			current.next = prevNode;
+			prevNode = current;
+			current = tempNode;
 		}
-		head=prevNode;
+		head = prevNode;
 	}
 
 	/**
@@ -159,7 +164,7 @@ public class SinglyLinkedList<E> {
 		while (tnode != null) {
 			System.out.print(tnode.data + " ");
 			tnode = tnode.next;
-			
+
 		}
 		System.out.println();
 	}
